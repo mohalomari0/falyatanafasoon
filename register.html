@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل المتطوعين</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #1f2937;
+            color: white;
+        }
+        .hero-section {
+            background: linear-gradient(to right, #2b6cb0, #6b46c1);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+        }
+        .hero-section p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        .form-section {
+            padding: 80px 20px;
+        }
+        .form-container {
+            background-color: #2d3748;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .form-container input, .form-container select, .form-container textarea {
+            background-color: #edf2f7;
+            color: #1a202c;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px;
+            width: 100%;
+        }
+        .form-container button {
+            background-color: #f6ad55;
+            color: #2d3748;
+            padding: 15px;
+            border-radius: 50px;
+            width: 100%;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .form-container button:hover {
+            background-color: #ed8936;
+        }
+        footer {
+            background-color: #2d3748;
+            color: white;
+            padding: 40px 20px;
+        }
+        footer a {
+            color: #f6ad55;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html">منصة التطوع الرمضانية</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="initiative-challenge.html">تحدي الخير</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="initiative-hikayati.html">حكايتي</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="initiative-golden-hands.html">الأيادي الذهبية</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="initiative-no-waste.html">رمضان بلا هدر</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="initiative-ramadan-lights.html">أنوار رمضان</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="initiative-good-coupon.html">كوبون الخير</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="register.html">تسجيل</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>انضم إلى حملتنا التطوعية</h1>
+            <p>سجل الآن للمشاركة في جهودنا الخيرية خلال شهر رمضان.</p>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <h2 class="text-center text-warning mb-5">نموذج التسجيل</h2>
+            <div class="form-container">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills">المهارات التي يمكن التبرع بها</label>
+                        <textarea id="skills" name="skills" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="initiative">اختر المبادرة</label>
+                        <select id="initiative" name="initiative" class="form-control" required>
+                            <option value="challenge">تحدي الخير</option>
+                            <option value="hikayati">حكايتي</option>
+                            <option value="golden-hands">الأيادي الذهبية</option>
+                            <option value="no-waste">رمضان بلا هدر</option>
+                            <option value="ramadan-lights">أنوار رمضان</option>
+                            <option value="good-coupon">كوبون الخير</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">تسجيل</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="text-warning">منصة التطوع الرمضانية</h3>
+                    <p>نسعى لتعزيز روح التطوع والعطاء خلال شهر رمضان المبارك.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-warning">روابط سريعة</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">الصفحة الرئيسية</a></li>
+                        <li><a href="register.html">تسجيل المتطوعين</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-warning">اتصل بنا</h4>
+                    <p>البريد الإلكتروني: info@ramadan-volunteer.com</p>
+                    <p>الهاتف: +966 123 456 789</p>
+                </div>
+            </div>
+            <hr>
+            <p>© 2025 منصة التطوع الرمضانية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
